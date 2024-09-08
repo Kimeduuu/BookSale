@@ -1,13 +1,15 @@
 "use client" // sempre use quando for usar alguma "funcao dentro de um cliente
 
-import { Flex, Text, Button, Input, Image, Link } from "@chakra-ui/react";
+import { Flex, Text, Button, Input, Image, Link, VStack } from "@chakra-ui/react";
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { useColorMode } from '@chakra-ui/react'
 
 import Retangulo from "./retangulo.png"
 
+
+// component imported
 import Test from './stateTest'
 
 
@@ -30,6 +32,8 @@ export default function About() {
 
   const nameOfBook = verifyName
 
+
+
   const handleChangeBook = (event: any) => {
     setVerifyName(event.target.value);
   };
@@ -41,15 +45,27 @@ export default function About() {
   }
  
 
-  const verify = test
+  const _name = test
 
 
   const [visible, setVisible] = useState(true)
 
   const [seeBook, setSeeBook] = useState()
 
-  
-  
+  // creating the useState which is of type number array which returns an array
+
+
+
+    const [newComponent, setNewComponent] = useState<number[]>([])
+
+
+  // using useEffect to create [number] inicial components
+    useEffect(() => {
+      const initialComponents = [0,1,2]
+      setNewComponent(initialComponents)
+    }, [])
+
+
 
   return (
     <Flex
@@ -132,16 +148,29 @@ export default function About() {
         <Text
           fontSize='23px'
         >
-          Resultados para: <strong> {test} </strong>
+          Resultados para: <strong>"{test}"</strong>
         </Text>
 
         
 
 
       </Flex>
+      <Flex>
 
-      <Test name={verify}/>
+      <Flex
+       gap='20px'
+       flexDir='row'
+      >
+
+      {newComponent.map((index) => (
+        <Test key={index} name={_name} />
+      ))}
+      </Flex>
       
+
+
+      </Flex>
     </Flex>
   )
 }
+
