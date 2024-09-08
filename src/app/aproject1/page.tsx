@@ -8,8 +8,6 @@ import Retangulo from "../components/imgs/retangulo.png"
 // import ImgKimedu from '../components/imgs/Kimedu.png'
 // import Teste from '../components/diversos/stateTest'
 
-import Test from '../components/diversos/stateTest'
-
 
 
 export default function Login() { 
@@ -177,7 +175,6 @@ export default function Login() {
               > 
                 Mandar
               </Button>
-              <Test messageName='gay' messageNum='9' />
 
           </Flex>
 
