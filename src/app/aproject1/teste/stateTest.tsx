@@ -31,7 +31,11 @@ export default function Teste(props: Book){
            {props.name}
         </Text>
 
-        <Button> Acessar</Button>
+        <Button
+         bgColor='purple.700'
+         transition='.5s'
+         _hover={{bgColor: 'purple.800'}}
+        > Acessar </Button>
        
 
     </Flex>
