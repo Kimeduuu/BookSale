@@ -43,22 +43,3 @@ export default function Teste(props: Book){
     )
     
 }
-        {/* <Input 
-         value={Name}
-         placeholder="qual o seu nome?"
-        />
-        <Button
-        //   onClick={() => setSeeThing(true)}
-         onClick={()=> setName}
-        >Mudar Estado</Button>
-        <Text>{Name}</Text> */}
-
-
-        
-        {/* <Button onClick={add}>
-            click
-        </Button>
-        
-
-        
-        <Text> {count} </Text> */}
